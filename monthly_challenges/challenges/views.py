@@ -15,7 +15,7 @@ monthly_challenges = {
     'september': "Cook a new recipe every week!",
     'october': "Limit screen time to 2 hours a day!",
     'november': "Practice gratitude every day!",
-    'december': "Volunteer for a good cause!"
+    'december': None
 }
 
 # Create your views here.
