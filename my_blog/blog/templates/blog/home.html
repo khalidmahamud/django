@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  My Blog
+{% endblock %}
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static 'blog/home.css' %}" />
+  <link rel="stylesheet" href="{% static 'blog/post.css' %}" />
+{% endblock %}
+
+{% block content %}
+  <section id="welcome">
+    <header>
+      <img src="{% static 'blog/images/khalid.jpg' %}" alt="Khalid - The Author of This Blog" />
+      <h2>KHALID'S BLOG</h2>
+    </header>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, odio!</p>
+  </section>
+
+  <section id="latest-posts">
+    <h2>My Latest Thoughts</h2>
+    <ul>
+      {% include "blog/includes/preview.html" %}
+    </ul>
+  </section>
+
+  <section id="about">
+    <h2>What I Do</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum quasi odio saepe. Asperiores, laborum labore.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur beatae ab aspernatur in illo fugiat?</p>
+  </section>
+{% endblock %}

@@ -4,11 +4,11 @@ from django.shortcuts import render
 
 
 def home_page(request):
-    pass
+    return render(request, "blog/home.html")
 
 
 def posts_page(request):
-    pass
+    return render(request, "blog/posts.html")
 
 
 def single_post_page(request):
