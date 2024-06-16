@@ -6,8 +6,8 @@
 {% endblock %}
 
 {% block css_files %}
-  <link rel="stylesheet" href="{% static 'blog/home.css' %}" />
   <link rel="stylesheet" href="{% static 'blog/post.css' %}" />
+  <link rel="stylesheet" href="{% static 'blog/home.css' %}" />
 {% endblock %}
 
 {% block content %}
@@ -22,7 +22,7 @@
   <section id="latest-posts">
     <h2>My Latest Thoughts</h2>
     <ul>
-      {% include "blog/includes/preview.html" %}
+      {% include 'blog/includes/preview.html' %}
     </ul>
   </section>
 
