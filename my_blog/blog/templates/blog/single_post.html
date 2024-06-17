@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+This Post Title 
+{% endblock title %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'blog/single_post.css' %}">
+{% endblock css_files %}
+
+{% block content %}
+    <section id="summary">
+        <h2>Post Title</h2>
+        <article>
+            <img src="{% static 'blog/images/mountains.jpg' %}" alt="Post Title">
+            <address>By Khalid</address>
+            <div>
+                Last updated on <time datetime=""July 10th></time>
+            </div>
+        </article>
+    </section>
+
+    <main>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae amet, tenetur dolorem soluta possimus eaque aspernatur laboriosam! Ipsam assumenda consequuntur dicta cum magni doloremque vitae quos. Cumque officiis sapiente reiciendis?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus repellendus deserunt, facilis perferendis ducimus aliquid ipsam atque cupiditate! Autem molestias ducimus a iste temporibus minima quisquam commodi exercitationem. Dolore, quaerat!
+        </p>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo sequi, officia modi quod, dolor fuga soluta sunt consequatur facere obcaecati voluptas ratione atque iusto vero voluptate dolores, voluptatibus harum minima.
+        </p>
+    </main>
+{% endblock content %}

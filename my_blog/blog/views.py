@@ -11,5 +11,5 @@ def posts_page(request):
     return render(request, "blog/posts.html")
 
 
-def single_post_page(request):
-    pass
+def single_post_page(request, slug):
+    return render(request, "blog/single_post.html")
