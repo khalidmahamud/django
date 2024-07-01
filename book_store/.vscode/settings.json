@@ -1,3 +1,4 @@
 {
-    "workbench.colorTheme": "Ayu Mirage",
+  "workbench.preferredDarkColorTheme": "Ayu Mirage",
+  "workbench.colorTheme": "Ayu Mirage"
 }
