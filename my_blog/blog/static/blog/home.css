@@ -73,3 +73,16 @@
     font-size: 1.5rem;
     color: #353535;
 }
+
+#latest-posts .post__content {
+    display: flex;
+    flex-direction: column;
+}
+
+#latest-posts .post__content h2 {
+    margin-bottom: auto; /* Pushes the article to the bottom */
+}
+
+#latest-posts .post__content article {
+    margin-top: auto; /* Pushes the article to the bottom */
+}
