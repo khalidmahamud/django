@@ -1,4 +1,5 @@
 from django import forms
 
+
 class ReviewForm(forms.Form):
-    user_name = forms.CharField()
+    user_name = forms.CharField(label="Your Name")
