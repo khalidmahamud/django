@@ -35,3 +35,13 @@ button:active {
   background-color: #830443;
   border-color: #830443;
 }
+
+ul {
+  list-style: none;
+}
+
+.profiles {
+  width: 90vw;
+  height: auto;
+  object-fit: scale-down;
+}
