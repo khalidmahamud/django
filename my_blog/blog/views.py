@@ -11,7 +11,7 @@ all_posts = Post.objects.all().order_by("-date")
 
 def home_page(request):
     latest_posts = all_posts[:3]
-    return render(
+    return render( 
         request,
         "blog/home.html",
         {

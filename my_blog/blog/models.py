@@ -29,7 +29,7 @@ class Post(models.Model):
         Author, null=True, on_delete=models.SET_NULL, related_name="posts"
     )
     excerpt = models.CharField(max_length=254)
-    image_name = models.CharField(max_length=100)
+    image = models.ImageField(upload_to="posts", null=True)
     date = models.DateField(auto_now=True)
     content = models.TextField(validators=[MinLengthValidator(10)])
     tags = models.ManyToManyField(Tag)
