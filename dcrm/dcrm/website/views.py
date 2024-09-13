@@ -2,6 +2,8 @@ from django.shortcuts import redirect, render
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 
+from .forms import SignUpForm
+
 # Create your views here.
 
 
@@ -11,9 +13,7 @@ def home(request):
         username = request.POST["username"]
         password = request.POST["password"]
         # Authenticate
-        user = authenticate(
-            request, username=username, password=password
-        )
+        user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
             messages.success(request, "You Have Been Logged In!")
@@ -39,4 +39,17 @@ def logout_user(request):
 
 
 def register_user(request):
-    return render(request, "register.html", {})
+    if request.method == "POST":
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(
+                request,
+                "You Have Registered Successfully. Log In To Continue...",
+            )
+            return redirect("home")
+    else:
+        form = SignUpForm()
+        return render(request, "register.html", {"form": form})
+    
+    return render(request, "register.html", {"form": form})
