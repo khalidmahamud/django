@@ -6,3 +6,5 @@ node_modules/
 dist/
 .env
 .myenv/
+
+Django_MySQL.session.sql
